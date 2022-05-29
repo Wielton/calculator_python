@@ -1,9 +1,7 @@
-class CalculatorInputError(Exception):
-    def __init__(self,value):
-        message = f'{value} is not a number. Choose again...'
-        super().__init__(message)
+class CalculatorInputError(ValueError):
+    def __init__(self):
+        ValueError.__init__(self)
         
 class FunctionSelectionError(Exception):
-    def __init__(self, value):
-        message = f'{value} is not an available selection. Choose again...'
-        super().__init__(message)
+    def __init__(self):
+        Exception.__init__(self, "Please Choose between 1 and 4: ")
